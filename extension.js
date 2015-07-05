@@ -1,7 +1,7 @@
 (function () {
     
     //Change this to your GitHub username so you don't have to modify so many things.
-    var fork = "Yemasthui";
+    var fork = "nd20";
 		
     //Define our function responsible for extending the bot.
     function extend() {
@@ -56,45 +56,45 @@
     //Change the bots default settings and make sure they are loaded on launch
 
     localStorage.setItem("basicBotsettings", JSON.stringify({
-        botName: "basicBot",
+        botName: "fambot2000",
         language: "english",
         chatLink: "https://rawgit.com/Yemasthui/basicBot/master/lang/en.json",
         startupCap: 1, // 1-200
         startupVolume: 0, // 0-100
         startupEmoji: false, // true or false
-        autowoot: true,
+        autowoot: false,
         smartSkip: true,
         cmdDeletion: true,
         maximumAfk: 120,
         afkRemoval: true,
-        maximumDc: 60,
+        maximumDc: 5,
         bouncerPlus: true,
         blacklistEnabled: true,
         lockdownEnabled: false,
-        lockGuard: false,
-        maximumLocktime: 10,
-        cycleGuard: true,
-        maximumCycletime: 10,
+        lockGuard: true,
+        maximumLocktime: 60,
+        cycleGuard: false,
+        maximumCycletime: 30,
         voteSkip: false,
-        voteSkipLimit: 10,
+        voteSkipLimit: 20,
         historySkip: false,
-        timeGuard: true,
-        maximumSongLength: 10,
-        autodisable: true,
+        timeGuard: false,
+        maximumSongLength: 180,
+        autodisable: false,
         commandCooldown: 30,
         usercommandsEnabled: true,
         skipPosition: 3,
         skipReasons: [
             ["theme", "This song does not fit the room theme. "],
-            ["op", "This song is on the OP list. "],
+            ["op", "This song is on the overplayed list. "],
             ["history", "This song is in the history. "],
-            ["mix", "You played a mix, which is against the rules. "],
+            ["censored", "You played a censored song, which is against the rules. "],
             ["sound", "The song you played had bad sound quality or no sound. "],
             ["nsfw", "The song you contained was NSFW (image or sound). "],
             ["unavailable", "The song you played was not available for some users. "]
         ],
-        afkpositionCheck: 15,
-        afkRankCheck: "ambassador",
+        afkpositionCheck: 1,
+        afkRankCheck: "bouncer",
         motdEnabled: false,
         motdInterval: 5,
         motd: "Temporary Message of the Day",
